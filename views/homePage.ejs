@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Search</title>
+    <!-- Include Bootstrap 5.0.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./homePage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+      <a class="navbar-brand"  id="logo"><span>T</span>ravel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#book">Book</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#packages">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="button" id="search-btn" >Search</button>
+        </form>
+        <form action="/login/logout" method="post">
+            <button class="btn btn-danger" type="submit" id="logout-btn" >Logout</button>
+        </form>
+        
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="home">
+    <div class="content">
+
+      <h5> Haii,<%=user%></h5>
+      <h5>Welcome To World</h5>
+      <h1>Visit <span class="changecontent"></span></h1>
+      <p>“Travel is the only thing you buy that makes you richer”</p>
+      <a href="#book">Book Place</a>
+    </div>
+  </div>
+
+
+
+
+
+  <section class="book" id="book">
+    <div class="container">
+      <div class="main-text">
+        <h1><span>B</span>ook</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="./Images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+          <form action="">
+            <input type="text" class="form-control " placeholder="Where To" required>
+            <input type="text" class="form-control" placeholder="How Many" required>
+            <input type="date" class="form-control" placeholder="Arivals" required>
+            <input type="date" class="form-control" placeholder="Leaving" required>
+            <textarea class="form-control" name="text" rows="5" placeholder="Enter your name & Details"></textarea>
+            <input type="submit" value="Book Now" class="submit" onclick="message()" required>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<section class="packages" id="packages">
+  <div class="main-text">
+    <h1><span>P</span>ackages</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-4 py-3 py-md-0">
+      <div class="card">
+        <img src="./Images/uk.png" alt="">
+        <div class="card-body">
+          <h3>United Kingdom</h3>
+          <p>One of the most powerful states in the world, the UK is flooded with tourists throughout the year.</p>
+          <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h6>Price: <strong>$500</strong></h6>
+          <a href="#book">Book Now</a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-md-4 py-3 py-md-0">
+      <div class="card">
+        <img src="./Images/italy.png" alt="">
+        <div class="card-body">
+          <h3>Italy</h3>
+          <p>Cherish some beautiful memories at the famous places to visit in Italy on your next vacation.</p>
+          <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h6>Price: <strong>$500</strong></h6>
+          <a href="#book">Book Now</a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-md-4 py-3 py-md-0">
+      <div class="card">
+        <img src="./Images/pakistan.png" alt="">
+        <div class="card-body">
+          <h3>Pakistan</h3>
+          <p>Pakistan is full of natural beauty and stunning mountains from north to the south.</p>
+          <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h6>Price: <strong>$500</strong></h6>
+          <a href="#book">Book Now</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-4 py-3 py-md-0">
+      <div class="card">
+        <img src="./Images/india.png" alt="">
+        <div class="card-body">
+          <h3>Bharat</h3>
+          <p>Bharat is a truly diverse country.There are plenty of amazing holiday destinations for different types of travellers, across the country.</p>
+          <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h6>Price: <strong>$500</strong></h6>
+          <a href="#book">Book Now</a>
+        </div>
+      </div>
+      
+    </div>
+
+
+
+    <div class="col-md-4 py-3 py-md-0">
+      <div class="card">
+        <img src="./Images/us.png" alt="">
+        <div class="card-body">
+          <h3>U.S.A</h3>
+          <p>The United States is home to some of the most spectacular scenery in the world and some of the most recognizable icons on the planet.</p>
+          <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h6>Price: <strong>$500</strong></h6>
+          <a href="#book">Book Now</a>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <div class="col-md-4 py-3 py-md-0">
+      <div class="card">
+        <img src="./Images/france.png" alt="">
+        <div class="card-body">
+          <h3>France</h3>
+          <p>From the boulevards of Paris to the fashionable seaside resorts of the Côte d'Azur, France offers some of the most beautiful scenery in the world.</p>
+          <div class="star">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h6>Price: <strong>$500</strong></h6>
+          <a href="#book">Book Now</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="main-text">
+      <h1><span>S</span>ervices</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-building"></i>
+          <div class="card-body">
+            <h3>Afforadble Hotel</h3>
+            <p>We provide afforadble hotel with luxury</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-utensils"></i>
+          <div class="card-body">
+            <h3>Food & Drinks</h3>
+            <p>We provide hyginic Food & Drink</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fa-solid fa-bullhorn"></i>
+          <div class="card-body">
+            <h3>Safty Guide</h3>
+            <p>We assure your safty</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-globe-asia"></i>
+          <div class="card-body">
+            <h3>Around The World</h3>
+            <p>We have packages around the world</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-plane"></i>
+          <div class="card-body">
+            <h3>Fastest Travel</h3>
+            <p>We can provide fastest travel</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+          <i class="fas fa-hiking"></i>
+          <div class="card-body">
+            <h3>Adventures</h3>
+            <p>In this packages we added adventures</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="main-text">
+      <h1>About <span>Us</span></h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6 py-3 py-md-0">
+        <div class="card">
+          <img src="./Images/travel-by-airplane-realistic-composition_1284-25926.avif" alt="">
+        </div>
+      </div>
+      <div class="col-md-6 py-3 py-md-0">
+        <h2>How Travel Agency Work</h2>
+        <p>The primary role of our travel agency is to help people make travel arrangements, 
+          which include booking flights, hotels, sightseeing tours, and making dining recommendations.
+           Our travel agency assesses each customer's unique needs, 
+          preferences, and budget to ensure their trip goes as smoothly as possible</p>
+        <button id="about-btn">Read More...</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer id="footer">
+  <div class="main-text">
+    <h1><span>T</span>ravel</h1>
+    <p>“Travel is the only thing you buy that makes you richer”</p>
+  </div>
+  <div class="social-link">
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-youtube"></i>
+    <i class="fa-brands fa-pinterest-p"></i>
+  </div>
+</footer>
+
+
+
+
+
+<!-- Include Bootstrap 5.0.2 JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- resubmission don't know it works -->
+<!-- <script>  
+  if ( window.history.replaceState ) { 
+          window.history.replaceState( null, null, window.location.href ); 
+      } 
+  </script> -->
+
+</body>
+</html>
+<!---->

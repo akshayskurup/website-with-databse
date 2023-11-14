@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <script>
+      
+
+
+        function validate(){
+          let username = document.getElementById("name")
+          let useremail = document.getElementById("email")
+          let userpassword = document.getElementById("password")
+            if(username.value==""){
+              alert("Please fill username input")
+              return false
+            }
+            else if(username.value=="" && useremail.value=="" && userpassword.value==""){
+            alert("Please fill all the fields")
+            return false
+          }
+            else if(useremail.value==""){
+              alert("please fill email input")
+              return false
+            }
+            else if(userpassword.value==""){
+              alert("please fill password input")
+              return false
+            }
+            else if (username.value.length <= 3 || userpassword.value.length <= 4 || userpassword.value.length >= 15) {
+        alert("Please add more length to your name and password");
+        return false;
+      } 
+            else{
+              true;
+            }
+      }
+      </script>
+
+
+</head>
+<body>
+    <center><p class="text bg-danger"><%=errorMessage%></p></center>
+    <div class="card align-items-center" style="width: 18rem;">
+    <form method="post" action="/adminPanel/update/<%= users._id %>" onsubmit="return validate()">
+        <p>NAME:</p>
+        <input placeholder="Name" name="name" type="text" value="<%=users.name%>" id="name">
+        <p>EMAIL</p>
+        <input placeholder="Email" name="email" type="email" value="<%=users.email%>" id="email">
+        <p>PASSWORD</p>
+        <input type="text" name="password" placeholder="password" value="<%=users.passwords%>" id="password"><br>
+        <button class="btn btn-info" type="submit">Submit</button>
+
+    </form>
+</div>
+</body>
+</html>
